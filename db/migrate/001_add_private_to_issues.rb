@@ -1,10 +1,10 @@
 class AddPrivateToIssues < ActiveRecord::Migration
- 
+	 
   def self.up
-    edit_column :issues, :private, :boolean, :default => true
+    add_column :issues, :private, :boolean, :default => false
   end
 
   def self.down
-    edit_column :issues, :private, :boolean, :default => false
+    remove_column :issues, :private
   end
 end
