@@ -1,4 +1,4 @@
-class AddPrivateToIssues < ActiveRecord::Migration
+class PrivateByDefault < ActiveRecord::Migration
  
   def self.up
     change_column :issues, :private, :boolean, :default => true
