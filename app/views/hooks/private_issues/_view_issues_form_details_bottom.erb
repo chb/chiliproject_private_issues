@@ -1,4 +1,4 @@
-<% if User.current.allowed_to?(:manage_private_issues, @project) -%>
+<% if User.current.allowed_to?(:manage_private_issues, @project) && params[:action] != 'new' -%>
     <% hidden_field_tag 'issue[private]', '0' %>
     <p id="private_issue_check">
       <%= label :issue, :private, l(:label_private_issue) %>
